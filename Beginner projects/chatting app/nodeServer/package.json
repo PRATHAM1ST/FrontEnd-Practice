@@ -1,0 +1,16 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "this is nodeserver for chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Pratham",
+  "license": "ISC",
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}
