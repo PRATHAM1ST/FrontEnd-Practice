@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&display=swap');
+body{
+    margin: 0%;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 0.3px;
+}
+
+.bg{
+    position: absolute;
+    background-image: url("https://source.unsplash.com/C6duwascOEA/1600x800");
+    background-size: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+/* IRaP12RxQVU */
+/* oMpAz-DN-9I */
+
+.bg::after{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.quote{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.writer{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    text-align: right;
+}

@@ -1,0 +1,32 @@
+*{
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#text-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text{
+    font-size: 5em;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(to right, #264653, #2a9d8f, #ffd829, #ff9844, #e65c3a);
+    background: linear-gradient(to right, #264653, #2a9d8f, #ffd829, #ff9844, #e65c3a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 500%;
+    animation: animate 5s linear infinite alternate;
+}
+
+@keyframes animate {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}

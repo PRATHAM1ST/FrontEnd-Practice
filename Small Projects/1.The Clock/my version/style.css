@@ -1,0 +1,162 @@
+*{
+    font-family: "poppins";
+    font-size: 1.75rem;
+    color: rgb(99, 99, 99);
+}
+
+body{
+    position: absolute;
+    min-width: 100%;
+    background-color: #180C2F;
+}
+
+#num12{
+    position: absolute;
+    margin: 5%;
+    top: 0%;
+}
+#num3{
+    position: absolute;
+    margin: 5%;
+    right: 0%;
+}
+#num6{
+    position: absolute;
+    margin: 5%;
+    bottom: 0%;
+}
+#num9{
+    position: absolute;
+    margin: 5%;
+    left: 0%;
+}
+
+#ClockBody{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+    background-color: #e2dcc5;
+    border-radius: 50%;
+    border: 20px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#HourHand{
+    position: absolute;
+    height: 125px;
+    width: 25px;
+    border-radius: 500px;
+    margin-bottom: 125px;
+    background-color: #1b1717;
+    transform-origin: center bottom;
+}
+
+#MinuteHand{
+    position: absolute;
+    height: 175px;
+    width: 20px;
+    border-radius: 500px;
+    margin-bottom: 175px;
+    background-color: #810000;
+    transform-origin: center bottom;
+}
+
+#SecondHand{
+    position: absolute;
+    height: 225px;
+    width: 5px;
+    border-radius: 500px;
+    margin-bottom: 225px;
+    background-color: #ce1212;
+    transform-origin: center bottom;
+}
+
+#point{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(63, 1, 1);
+}
+
+/* @keyframes HandRotator {
+    to{
+        transform: rotate(1turn);
+    }
+
+    /* from{
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+    }   
+    to{
+        transform: rotate(360deg);
+        transform-origin: center bottom;
+    } /
+} */
+
+
+#sun{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg) translateX(-800%);
+    height: 75px;
+    width: 75px;
+    background-image: radial-gradient(white 2%, yellow 80%);
+    box-shadow: 0 0 50px 10px yellow;
+    border-radius: 50%;
+}
+
+#moon{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-900%, -50%);
+    height: 75px;
+    width: 75px;
+    background-color: transparent;
+    box-shadow: -10px 10px 0px 10px white;
+    border-radius: 50%;
+}
+
+@keyframes Orbit {
+    from { transform: rotate(0deg) translateX(1250%) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(1250%) rotate(-360deg); }
+}
+
+#bg{
+    position: fixed;
+    z-index: -10;
+    top: -50%;
+    left: 0%;
+    height: 300%;
+    width: 100%;
+    background-image: linear-gradient(
+        to top,
+        #180C2F, 
+        #3D134F, 
+        #60154A, 
+        #8D3C21, 
+        #C3B632, 
+        #F2ED6F, 
+        #CEE397,
+        #ffffff,
+        #CEE397,
+        #F2ED6F,
+        #C3B632,
+        #8D3C21,
+        #60154A,
+        #3D134F,
+        #180C2F
+    );
+}

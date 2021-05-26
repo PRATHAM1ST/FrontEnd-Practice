@@ -1,0 +1,94 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+body{
+    background-color: #1B2024;
+}
+.parent-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vmin;
+    height: 70vmin;
+    background-color:  #1B1B1B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+input{
+    background-color: transparent;
+    border-radius: 50000px;
+    border: 1px solid rgb(54, 84, 218);
+    height: 15%;
+    width: 90%;
+    margin: 2.5%;
+    outline: none;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1em;
+    transition: border 1s ease;
+
+}
+
+#login{
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border-radius: 50000px;
+    border: 1px solid rgb(14, 219, 83);
+    height: 12.5%;
+    width: 50%;
+    margin: 15%;
+    text-transform: uppercase;
+}
+
+#header{
+    position: absolute;
+    top: 0%;
+    margin: 7.5%;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus{
+    border-radius: 0;
+}
+
+#login:focus{
+    animation: login-click 2s ease;
+}
+
+@keyframes login-click {
+    0%{
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    50%{
+        border-radius: 0;
+        background-color: rgb(14, 219, 83);
+    }
+    100%{
+        border-radius:  0px;
+        background-color: transparent;
+    }
+}
