@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Bebas+Neue&family=Bree+Serif&family=Mate+SC&family=Oleo+Script:wght@700&family=Pattaya&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); */
+
+:root{
+    --bg-clr: #F5B51B;
+    --font-clr: #133E58;
+    --font-style: 'Oleo Script', cursive;
+}
+
+body{
+    margin: 0;
+    background: #212121;
+    font-family: var(--font-style);
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reverse{
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    align-self: flex-end;
+    transform-origin: center;
+    left: 85%;
+    top: 0;
+    margin: 5%;
+    transition: all 1s ease;
+}
+
+.input-area{
+    position: relative;
+    outline: none;
+    min-height: 3rem;
+    width: 50%;
+    color: white;
+    background: #474747;
+    border-radius: 8394834px;
+    border: 0.3rem solid #9E9E9E;
+    text-align: center;
+    font-family: 'Noto Serif', serif;;
+    font-size: 1.5rem;
+}
+
+.input-area::placeholder{
+    font-family: var(--font-style);
+    color: #BDBDBD;
+}
+
+
+.output-area{
+    position: relative;
+    border:0.3rem solid white;
+    border-radius: 1rem;
+    min-height: 50%;
+    width: 90%;
+    background-color: var(--bg-clr);
+    color: var(--font-clr);
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    transition: all 1s ease;
+}
+
+.output-area::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
+    filter: blur(1rem);
+}
+
+.palettes{
+    display: flex;
+}
+
+.color-palette{
+    margin: 2rem;
+    margin-right: 10rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.colors{
+    position: relative;
+    margin: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border: 0.2rem solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.bg-clr{
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 100%;
+}
+
+.font-clr{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.c1{
+    box-shadow: 0 0 1rem 0.5rem white;
+}
+
+.b1{
+    background:#F5B51B;
+}
+
+.f1{
+    background: #133E58;
+}
+
+.b2{
+    background:#7ADAC0;
+}
+
+.f2{
+    background: #200371;
+}
+
+.b3{
+    background: #FF7129;
+}
+
+.f3{
+    background: #2F2F2B;
+}
+
+.b4{
+    background:#FEA981;
+}
+
+.f4{
+    background: #5C0E2F;
+}
+
+.b5{
+    background:#F8D3E2;
+}
+
+.f5{
+    background: #0D1239;
+}
+
+
+.font-palette{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.75rem;
+    margin: 2rem;
+    margin-left: 10rem;
+}
+
+.font{
+    cursor: pointer;
+    margin: 1rem;
+    background: transparent;
+    color: white;
+    transition: 1s ease;
+}
+
+.f1{
+    font-family: 'Oleo Script', cursive;
+    box-shadow: 0 0.5rem 0 0 white;
+}
+
+.f2{
+    font-family: 'Pattaya', sans-serif;
+}
+.f3{
+    font-family: 'Mate SC', serif;
+}
+.f4{
+    font-family: 'Bebas Neue', cursive;
+}
+.f5{
+    font-family: 'Bree Serif', serif;
+}
