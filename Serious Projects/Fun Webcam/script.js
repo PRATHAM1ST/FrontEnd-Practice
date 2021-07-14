@@ -1,4 +1,3 @@
-
 // video data
 
 const canvas = document.querySelector(".canvas");
@@ -15,11 +14,12 @@ async function getVideo() {
   try{
    stream = await navigator.mediaDevices.getUserMedia(constraints);
    video.srcObject = stream;
-   notification.style.height = "0%";
+   closeNotification.click();
    paintToCanvas();
   }
   catch(err){
-     notification.style.height = "100%";
+     openNotification();
+     closeNotification.style.visibility = "hidden";
      notification.innerHTML = "Oh no, you denied the webcam, no fun for you.";
      notification.style.color = "red";
    };
@@ -79,17 +79,21 @@ const information = document.querySelector(".information");
 const help = document.querySelector(".help");
 const closeNotification = document.querySelector(".closenotification");
 
-
-information.addEventListener('click', ()=>{
+function openNotification(){
   notification.style.height = "100%";
-  notification.innerHTML = `<p><h1><u id="colourful">Fun Project</u></h1></p><br/><p>The code 💻 is taking <u>Average colour</u> 🎨 from the video camera 📷 input in <u>Realtime</u> and updating the elements for fun. 😁✌️</p>`;
-  notification.style.color = "black";
   closeNotification.style.opacity = "1";
   TotalVisits.style.height = "auto";
+}
+
+
+information.addEventListener('click', ()=>{
+  openNotification();
+  notification.innerHTML = `<p><h1><u id="colourful">Fun Project</u></h1></p><br/><p>The code 💻 is taking <u>Average colour</u> 🎨 from the video camera 📷 input in <u>Realtime</u> and updating the elements for fun. 😁✌️</p>`;
+
 })
 
 help.addEventListener('click', ()=>{
-  notification.style.height = "100%";
+  openNotification();
   notification.innerHTML = `<p><h1><u id="colourful">How To Use This?</u></h1></p>
   <div>
   <li>Take any colourful object. 🎨</li>
@@ -99,9 +103,6 @@ help.addEventListener('click', ()=>{
   <li>Don't forget to have fun and give me feedback on anything. 😁</li>
   <li>PEACE. ✌️</li>
   </div>`;
-  notification.style.color = "black";
-  closeNotification.style.opacity = "1";
-  TotalVisits.style.height = "auto";
 })
 
 closeNotification.addEventListener('click', ()=>{
@@ -121,4 +122,4 @@ function upadateVisitCount(){
   })
 }
 
-upadateVisitCount();
+// upadateVisitCount();
