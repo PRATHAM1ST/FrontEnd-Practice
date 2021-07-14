@@ -122,4 +122,4 @@ function upadateVisitCount(){
   })
 }
 
-// upadateVisitCount();
+upadateVisitCount();
