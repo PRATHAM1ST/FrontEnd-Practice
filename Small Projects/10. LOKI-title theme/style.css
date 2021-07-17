@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Berkshire+Swash&family=Leckerli+One&family=Otomanopee+One&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Coiny&family=Elsie:wght@900&family=Kranky&family=Notable&family=Plaster&family=Spirax&display=swap');
+
+:root{
+    --animation-speed: 10s;
+}
+
+body{
+    margin: 0;
+    font-size: 5rem;
+    background: #05070B;
+}
+
+audio{
+    visibility: hidden;
+}
+
+.container{
+    position: absolute;
+    max-height: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.letter{
+    margin-right: 5rem;
+    color: #d6d6d6;
+    text-shadow: 0 0 1rem #d6d6d6,
+                 0 0 5rem hsl(0, 0%, 100%);
+}
+
+
+
+.letter-1{
+    animation: letter var(--animation-speed) ease infinite alternate;
+}
+
+.letter-2{
+    animation: letter calc(var(--animation-speed)*4.6) ease infinite alternate;
+    animation-delay: 4.6s;
+
+}
+
+.letter-3{
+    animation: letter calc(var(--animation-speed)*3.7)  ease infinite alternate;
+    animation-delay: 3.7s;
+}
+
+.letter-4{
+    animation: letter calc(var(--animation-speed)*4)  ease infinite alternate;
+    animation-delay: 0.5s;
+}
+
+.letter-5{
+    animation: letter calc(var(--animation-speed)*2.4) ease infinite alternate;
+    animation-delay: 2.4s;
+}
+
+.letter-6{
+    animation: letter calc(var(--animation-speed)*0.8)  ease infinite alternate;
+    animation-delay: 0.8s;
+}
+
+.letter-7{
+    margin: 0;
+    animation: letter calc(var(--animation-speed)*5) ease infinite alternate;
+    animation-delay: 5s;
+}
+
+
+@keyframes letter{
+    0%{
+        font-size: 5rem;
+        font-family: 'Raleway';
+        text-transform: lowercase;
+    }
+
+    7.69%{
+        font-family: 'Alfa Slab One', cursive;
+        text-transform: uppercase;
+    }
+
+    15.38%{
+        font-family: 'Berkshire Swash', cursive;
+        text-transform: uppercase;
+    }
+
+    23%{
+        font-family: 'Leckerli One', cursive;
+        text-transform: uppercase;
+    }
+
+    30.76%{
+        font-family: 'Otomanopee One', sans-serif;
+        text-transform: lowercase;
+    }
+
+    38.45%{
+        font-family: 'Tourney', cursive;
+        text-transform: uppercase;
+    }
+
+    46.14%{
+        text-transform: uppercase;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    53.83%{
+        font-size: 5.5rem;
+        text-transform: lowercase;
+        font-family: 'Coiny', cursive;
+    }
+
+    61.52%{
+        text-transform: uppercase;
+        font-family: 'Elsie', cursive;
+    }
+    69.21%{
+        text-transform: lowercase;
+        font-family: 'Kranky', cursive;
+    }
+    76.9%{
+        text-transform: lowercase;
+        font-family: 'Notable', sans-serif;
+    }
+    84.59%{
+        text-transform: uppercase;
+        font-family: 'Plaster', cursive;
+    }
+    92.28%{
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-family: 'Spirax', cursive;
+    }
+}
